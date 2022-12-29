@@ -1,0 +1,4 @@
+51.142.122.112 growtopia1.com
+51.142.122.112 growtopia2.com
+51.142.122.112 www.growtopia1.com
+51.142.122.112 www.growtopia2.com
