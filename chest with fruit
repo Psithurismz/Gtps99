@@ -1,0 +1,823 @@
+repeat wait() until game:IsLoaded()
+aut = true
+
+function totarget(CFgo)
+    local tween_s = game:service"TweenService"
+    local info = TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - CFgo.Position).Magnitude/300, Enum.EasingStyle.Linear)
+    local tween, err = pcall(function()
+        tween = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = CFgo})
+        tween:Play()
+    end)
+    if not tween then return err end
+end
+
+function Store2()
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Kilo Fruit") then
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+        "StoreFruit",
+        "Kilo-Kilo",
+        game.Players.LocalPlayer.Backpack["Kilo Fruit"]
+    )
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+        "StoreFruit",
+        "Spring-Spring",
+        game.Players.LocalPlayer.Character["Kilo Fruit"]
+    )
+else
+    if game.Players.LocalPlayer.Backpack:FindFirstChild("Spring Fruit") then
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+            "StoreFruit",
+            "Spring-Spring",
+            game.Players.LocalPlayer.Backpack["Spring Fruit"]
+        )
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+            "StoreFruit",
+            "Spring-Spring",
+            game.Players.LocalPlayer.Character["Spring Fruit"]
+        )
+    else
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("Bomb Fruit") then
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                "StoreFruit",
+                "Bomb-Bomb",
+                game.Players.LocalPlayer.Backpack["Bomb Fruit"]
+            )
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                "StoreFruit",
+                "Bomb-Bomb",
+                game.Players.LocalPlayer.Character["Bomb Fruit"]
+            )
+        else
+            if game.Players.LocalPlayer.Backpack:FindFirstChild("Chop Fruit") then
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                    "StoreFruit",
+                    "Chop-Chop",
+                    game.Players.LocalPlayer.Backpack["Chop Fruit"]
+                )
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                    "StoreFruit",
+                    "Chop-Chop",
+                    game.Players.LocalPlayer.Character["Chop Fruit"]
+                )
+            else
+                if game.Players.LocalPlayer.Backpack:FindFirstChild("Spin Fruit") then
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                        "StoreFruit",
+                        "Spin-Spin",
+                        game.Players.LocalPlayer.Backpack["Spin Fruit"]
+                    )
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                        "StoreFruit",
+                        "Spin-Spin",
+                        game.Players.LocalPlayer.Character["Spin Fruit"]
+                    )
+                else
+                    if game.Players.LocalPlayer.Backpack:FindFirstChild("Smoke Fruit") then
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                            "StoreFruit",
+                            "Smoke-Smoke",
+                            game.Players.LocalPlayer.Backpack["Smoke Fruit"]
+                        )
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                            "StoreFruit",
+                            "Smoke-Smoke",
+                            game.Players.LocalPlayer.Character["Smoke Fruit"]
+                        )
+                    else
+                        if game.Players.LocalPlayer.Backpack:FindFirstChild("Flame Fruit") then
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                "StoreFruit",
+                                "Flame-Flame",
+                                game.Players.LocalPlayer.Backpack["Flame Fruit"]
+                            )
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                "StoreFruit",
+                                "Flame-Flame",
+                                game.Players.LocalPlayer.Character["Flame Fruit"]
+                            )
+                        else
+                            if game.Players.LocalPlayer.Backpack:FindFirstChild("Falcon Fruit") then
+                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                    "StoreFruit",
+                                    "Falcon-Falcon",
+                                    game.Players.LocalPlayer.Backpack["Falcon Fruit"]
+                                )
+                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                    "StoreFruit",
+                                    "Falcon-Falcon",
+                                    game.Players.LocalPlayer.Character["Falcon Fruit"]
+                                )
+                            else
+                                if game.Players.LocalPlayer.Backpack:FindFirstChild("Ice Fruit") then
+                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                        "StoreFruit",
+                                        "Ice-Ice",
+                                        game.Players.LocalPlayer.Backpack["Ice Fruit"]
+                                    )
+                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                        "StoreFruit",
+                                        "Ice-Ice",
+                                        game.Players.LocalPlayer.Character["Ice Fruit"]
+                                    )
+                                else
+                                    if game.Players.LocalPlayer.Backpack:FindFirstChild("Sand Fruit") then
+                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                            "StoreFruit",
+                                            "Sand-Sand",
+                                            game.Players.LocalPlayer.Backpack["Sand Fruit"]
+                                        )
+                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                            "StoreFruit",
+                                            "Sand-Sand",
+                                            game.Players.LocalPlayer.Character["Sand Fruit"]
+                                        )
+                                    else
+                                        if game.Players.LocalPlayer.Backpack:FindFirstChild("Dark Fruit") then
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                "StoreFruit",
+                                                "Dark-Dark",
+                                                game.Players.LocalPlayer.Backpack["Dark Fruit"]
+                                            )
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                "StoreFruit",
+                                                "Dark-Dark",
+                                                game.Players.LocalPlayer.Character["Dark Fruit"]
+                                            )
+                                        else
+                                            if game.Players.LocalPlayer.Backpack:FindFirstChild("Revive Fruit") then
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                    "StoreFruit",
+                                                    "Revive-Revive",
+                                                    game.Players.LocalPlayer.Backpack["Revive Fruit"]
+                                                )
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                    "StoreFruit",
+                                                    "Revive-Revive",
+                                                    game.Players.LocalPlayer.Character["Revive Fruit"]
+                                                )
+                                            else
+                                                if game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Fruit") then
+                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                        "StoreFruit",
+                                                        "Diamond-Diamond",
+                                                        game.Players.LocalPlayer.Backpack["Diamond Fruit"]
+                                                    )
+                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                        "StoreFruit",
+                                                        "Diamond-Diamond",
+                                                        game.Players.LocalPlayer.Character["Diamond Fruit"]
+                                                    )
+                                                else
+                                                    if game.Players.LocalPlayer.Backpack:FindFirstChild("Light Fruit") then
+                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                            "StoreFruit",
+                                                            "Light-Light",
+                                                            game.Players.LocalPlayer.Backpack["Light Fruit"]
+                                                        )
+                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                            "StoreFruit",
+                                                            "Light-Light",
+                                                            game.Players.LocalPlayer.Character["Light Fruit"]
+                                                        )
+                                                    else
+                                                        if
+                                                            game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                "Rubber Fruit"
+                                                            )
+                                                         then
+                                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                "StoreFruit",
+                                                                "Rubber-Rubber",
+                                                                game.Players.LocalPlayer.Backpack["Rubber Fruit"]
+                                                            )
+                                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                "StoreFruit",
+                                                                "Rubber-Rubber",
+                                                                game.Players.LocalPlayer.Character["Rubber Fruit"]
+                                                            )
+                                                        else
+                                                            if
+                                                                game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                    "Barrier Fruit"
+                                                                )
+                                                             then
+                                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                    "StoreFruit",
+                                                                    "Barrier-Barrier",
+                                                                    game.Players.LocalPlayer.Backpack["Barrier Fruit"]
+                                                                )
+                                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                    "StoreFruit",
+                                                                    "Barrier-Barrier",
+                                                                    game.Players.LocalPlayer.Character["Barrier Fruit"]
+                                                                )
+                                                            else
+                                                                if
+                                                                    game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                        "Quake Fruit"
+                                                                    )
+                                                                 then
+                                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                        "StoreFruit",
+                                                                        "Quake-Quake",
+                                                                        game.Players.LocalPlayer.Backpack["Quake Fruit"]
+                                                                    )
+                                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                        "StoreFruit",
+                                                                        "Quake-Quake",
+                                                                        game.Players.LocalPlayer.Character["Quake Fruit"]
+                                                                    )
+                                                                else
+                                                                    if
+                                                                        game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                            "Buddha Fruit"
+                                                                        )
+                                                                     then
+                                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                            "StoreFruit",
+                                                                            "Buddha-Buddha",
+                                                                            game.Players.LocalPlayer.Backpack[
+                                                                                "Buddha Fruit"
+                                                                            ]
+                                                                        )
+                                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                            "StoreFruit",
+                                                                            "Buddha-Buddha",
+                                                                            game.Players.LocalPlayer.Character[
+                                                                                "Buddha Fruit"
+                                                                            ]
+                                                                        )
+                                                                    else
+                                                                        if
+                                                                            game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                "Love Fruit"
+                                                                            )
+                                                                         then
+                                                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                                "StoreFruit",
+                                                                                "Love-Love",
+                                                                                game.Players.LocalPlayer.Backpack[
+                                                                                    "Love Fruit"
+                                                                                ]
+                                                                            )
+                                                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                                "StoreFruit",
+                                                                                "Love-Love",
+                                                                                game.Players.LocalPlayer.Character[
+                                                                                    "Love Fruit"
+                                                                                ]
+                                                                            )
+                                                                        else
+                                                                            if
+                                                                                game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                    "Spider Fruit"
+                                                                                )
+                                                                             then
+                                                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                                    "StoreFruit",
+                                                                                    "Spider-Spider",
+                                                                                    game.Players.LocalPlayer.Backpack[
+                                                                                        "Spider Fruit"
+                                                                                    ]
+                                                                                )
+                                                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                                    "StoreFruit",
+                                                                                    "Spider-Spider",
+                                                                                    game.Players.LocalPlayer.Character[
+                                                                                        "Spider Fruit"
+                                                                                    ]
+                                                                                )
+                                                                            else
+                                                                                if
+                                                                                    game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                        "Phoenix Fruit"
+                                                                                    )
+                                                                                 then
+                                                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                                        "StoreFruit",
+                                                                                        "Phoenix-Phoenix",
+                                                                                        game.Players.LocalPlayer.Backpack[
+                                                                                            "Phoenix Fruit"
+                                                                                        ]
+                                                                                    )
+                                                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                                                        "StoreFruit",
+                                                                                        "Phoenix-Phoenix",
+                                                                                        game.Players.LocalPlayer.Character[
+                                                                                            "Phoenix Fruit"
+                                                                                        ]
+                                                                                    )
+                                                                                else
+                                                                                    if
+                                                                                        game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                            "Portal Fruit"
+                                                                                        )
+                                                                                     then
+                                                                                        game:GetService(
+                                                                                            "ReplicatedStorage"
+                                                                                        ).Remotes.CommF_:InvokeServer(
+                                                                                            "StoreFruit",
+                                                                                            "Portal-Portal",
+                                                                                            game.Players.LocalPlayer.Backpack[
+                                                                                                "Portal Fruit"
+                                                                                            ]
+                                                                                        )
+                                                                                        game:GetService(
+                                                                                            "ReplicatedStorage"
+                                                                                        ).Remotes.CommF_:InvokeServer(
+                                                                                            "StoreFruit",
+                                                                                            "Portal-Portal",
+                                                                                            game.Players.LocalPlayer.Character[
+                                                                                                "Portal Fruit"
+                                                                                            ]
+                                                                                        )
+                                                                                    else
+                                                                                        if
+                                                                                            game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                "Rumble Fruit"
+                                                                                            )
+                                                                                         then
+                                                                                            game:GetService(
+                                                                                                "ReplicatedStorage"
+                                                                                            ).Remotes.CommF_:InvokeServer(
+                                                                                                "StoreFruit",
+                                                                                                "Rumble-Rumble",
+                                                                                                game.Players.LocalPlayer.Backpack[
+                                                                                                    "Rumble Fruit"
+                                                                                                ]
+                                                                                            )
+                                                                                            game:GetService(
+                                                                                                "ReplicatedStorage"
+                                                                                            ).Remotes.CommF_:InvokeServer(
+                                                                                                "StoreFruit",
+                                                                                                "Rumble-Rumble",
+                                                                                                game.Players.LocalPlayer.Character[
+                                                                                                    "Rumble Fruit"
+                                                                                                ]
+                                                                                            )
+                                                                                        else
+                                                                                            if
+                                                                                                game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                    "Paw Fruit"
+                                                                                                )
+                                                                                             then
+                                                                                                game:GetService(
+                                                                                                    "ReplicatedStorage"
+                                                                                                ).Remotes.CommF_:InvokeServer(
+                                                                                                    "StoreFruit",
+                                                                                                    "Paw-Paw",
+                                                                                                    game.Players.LocalPlayer.Backpack[
+                                                                                                        "Paw Fruit"
+                                                                                                    ]
+                                                                                                )
+                                                                                                game:GetService(
+                                                                                                    "ReplicatedStorage"
+                                                                                                ).Remotes.CommF_:InvokeServer(
+                                                                                                    "StoreFruit",
+                                                                                                    "Paw-Paw",
+                                                                                                    game.Players.LocalPlayer.Character[
+                                                                                                        "Paw Fruit"
+                                                                                                    ]
+                                                                                                )
+                                                                                            else
+                                                                                                if
+                                                                                                    game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                        "Blizzard Fruit"
+                                                                                                    )
+                                                                                                 then
+                                                                                                    game:GetService(
+                                                                                                        "ReplicatedStorage"
+                                                                                                    ).Remotes.CommF_:InvokeServer(
+                                                                                                        "StoreFruit",
+                                                                                                        "Blizzard-Blizzard",
+                                                                                                        game.Players.LocalPlayer.Backpack[
+                                                                                                            "Blizzard Fruit"
+                                                                                                        ]
+                                                                                                    )
+                                                                                                    game:GetService(
+                                                                                                        "ReplicatedStorage"
+                                                                                                    ).Remotes.CommF_:InvokeServer(
+                                                                                                        "StoreFruit",
+                                                                                                        "Blizzard-Blizzard",
+                                                                                                        game.Players.LocalPlayer.Character[
+                                                                                                            "Blizzard Fruit"
+                                                                                                        ]
+                                                                                                    )
+                                                                                                else
+                                                                                                    if
+                                                                                                        game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                            "Gravity Fruit"
+                                                                                                        )
+                                                                                                     then
+                                                                                                        game:GetService(
+                                                                                                            "ReplicatedStorage"
+                                                                                                        ).Remotes.CommF_:InvokeServer(
+                                                                                                            "StoreFruit",
+                                                                                                            "Gravity-Gravity",
+                                                                                                            game.Players.LocalPlayer.Backpack[
+                                                                                                                "Gravity Fruit"
+                                                                                                            ]
+                                                                                                        )
+                                                                                                        game:GetService(
+                                                                                                            "ReplicatedStorage"
+                                                                                                        ).Remotes.CommF_:InvokeServer(
+                                                                                                            "StoreFruit",
+                                                                                                            "Gravity-Gravity",
+                                                                                                            game.Players.LocalPlayer.Character[
+                                                                                                                "Gravity Fruit"
+                                                                                                            ]
+                                                                                                        )
+                                                                                                    else
+                                                                                                        if
+                                                                                                            game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                "Dough Fruit"
+                                                                                                            )
+                                                                                                         then
+                                                                                                            game:GetService(
+                                                                                                                "ReplicatedStorage"
+                                                                                                            ).Remotes.CommF_:InvokeServer(
+                                                                                                                "StoreFruit",
+                                                                                                                "Dough-Dough",
+                                                                                                                game.Players.LocalPlayer.Backpack[
+                                                                                                                    "Dough Fruit"
+                                                                                                                ]
+                                                                                                            )
+                                                                                                            game:GetService(
+                                                                                                                "ReplicatedStorage"
+                                                                                                            ).Remotes.CommF_:InvokeServer(
+                                                                                                                "StoreFruit",
+                                                                                                                "Dough-Dough",
+                                                                                                                game.Players.LocalPlayer.Character[
+                                                                                                                    "Dough Fruit"
+                                                                                                                ]
+                                                                                                            )
+                                                                                                        else
+                                                                                                            if
+                                                                                                                game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                    "Shadow Fruit"
+                                                                                                                )
+                                                                                                             then
+                                                                                                                game:GetService(
+                                                                                                                    "ReplicatedStorage"
+                                                                                                                ).Remotes.CommF_:InvokeServer(
+                                                                                                                    "StoreFruit",
+                                                                                                                    "Shadow-Shadow",
+                                                                                                                    game.Players.LocalPlayer.Backpack[
+                                                                                                                        "Shadow Fruit"
+                                                                                                                    ]
+                                                                                                                )
+                                                                                                                game:GetService(
+                                                                                                                    "ReplicatedStorage"
+                                                                                                                ).Remotes.CommF_:InvokeServer(
+                                                                                                                    "StoreFruit",
+                                                                                                                    "Shadow-Shadow",
+                                                                                                                    game.Players.LocalPlayer.Character[
+                                                                                                                        "Shadow Fruit"
+                                                                                                                    ]
+                                                                                                                )
+                                                                                                            else
+                                                                                                                if
+                                                                                                                    game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                        "Venom Fruit"
+                                                                                                                    )
+                                                                                                                 then
+                                                                                                                    game:GetService(
+                                                                                                                        "ReplicatedStorage"
+                                                                                                                    ).Remotes.CommF_:InvokeServer(
+                                                                                                                        "StoreFruit",
+                                                                                                                        "Venom-Venom",
+                                                                                                                        game.Players.LocalPlayer.Backpack[
+                                                                                                                            "Venom Fruit"
+                                                                                                                        ]
+                                                                                                                    )
+                                                                                                                    game:GetService(
+                                                                                                                        "ReplicatedStorage"
+                                                                                                                    ).Remotes.CommF_:InvokeServer(
+                                                                                                                        "StoreFruit",
+                                                                                                                        "Venom-Venom",
+                                                                                                                        game.Players.LocalPlayer.Character[
+                                                                                                                            "Venom Fruit"
+                                                                                                                        ]
+                                                                                                                    )
+                                                                                                                else
+                                                                                                                    if
+                                                                                                                        game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                            "Control Fruit"
+                                                                                                                        )
+                                                                                                                     then
+                                                                                                                        game:GetService(
+                                                                                                                            "ReplicatedStorage"
+                                                                                                                        ).Remotes.CommF_:InvokeServer(
+                                                                                                                            "StoreFruit",
+                                                                                                                            "Control-Control",
+                                                                                                                            game.Players.LocalPlayer.Backpack[
+                                                                                                                                "Control Fruit"
+                                                                                                                            ]
+                                                                                                                        )
+                                                                                                                        game:GetService(
+                                                                                                                            "ReplicatedStorage"
+                                                                                                                        ).Remotes.CommF_:InvokeServer(
+                                                                                                                            "StoreFruit",
+                                                                                                                            "Control-Control",
+                                                                                                                            game.Players.LocalPlayer.Character[
+                                                                                                                                "Control Fruit"
+                                                                                                                            ]
+                                                                                                                        )
+                                                                                                                    else
+                                                                                                                        if
+                                                                                                                            game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                                "Spirit Fruit"
+                                                                                                                            )
+                                                                                                                         then
+                                                                                                                            game:GetService(
+                                                                                                                                "ReplicatedStorage"
+                                                                                                                            ).Remotes.CommF_:InvokeServer(
+                                                                                                                                "StoreFruit",
+                                                                                                                                "Spirit-Spirit",
+                                                                                                                                game.Players.LocalPlayer.Backpack[
+                                                                                                                                    "Spirit Fruit"
+                                                                                                                                ]
+                                                                                                                            )
+                                                                                                                            game:GetService(
+                                                                                                                                "ReplicatedStorage"
+                                                                                                                            ).Remotes.CommF_:InvokeServer(
+                                                                                                                                "StoreFruit",
+                                                                                                                                "Spirit-Spirit",
+                                                                                                                                game.Players.LocalPlayer.Character[
+                                                                                                                                    "Spirit Fruit"
+                                                                                                                                ]
+                                                                                                                            )
+                                                                                                                        else
+                                                                                                                            if
+                                                                                                                                game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                                    "Dragon Fruit"
+                                                                                                                                )
+                                                                                                                             then
+                                                                                                                                game:GetService(
+                                                                                                                                    "ReplicatedStorage"
+                                                                                                                                ).Remotes.CommF_:InvokeServer(
+                                                                                                                                    "StoreFruit",
+                                                                                                                                    "Dragon-Dragon",
+                                                                                                                                    game.Players.LocalPlayer.Backpack[
+                                                                                                                                        "Dragon Fruit"
+                                                                                                                                    ]
+                                                                                                                                )
+                                                                                                                                game:GetService(
+                                                                                                                                    "ReplicatedStorage"
+                                                                                                                                ).Remotes.CommF_:InvokeServer(
+                                                                                                                                    "StoreFruit",
+                                                                                                                                    "Dragon-Dragon",
+                                                                                                                                    game.Players.LocalPlayer.Character[
+                                                                                                                                        "Dragon Fruit"
+                                                                                                                                    ]
+                                                                                                                                )
+                                                                                                                            else
+                                                                                                                                if
+                                                                                                                                    game.Players.LocalPlayer.Backpack:FindFirstChild(
+                                                                                                                                        "Leopard Fruit"
+                                                                                                                                    )
+                                                                                                                                 then
+                                                                                                                                    game:GetService(
+                                                                                                                                        "ReplicatedStorage"
+                                                                                                                                    ).Remotes.CommF_:InvokeServer(
+                                                                                                                                        "StoreFruit",
+                                                                                                                                        "Leopard-Leopard",
+                                                                                                                                        game.Players.LocalPlayer.Backpack[
+                                                                                                                                            "Leopard Fruit"
+                                                                                                                                        ]
+                                                                                                                                    )
+                                                                                                                                    game:GetService(
+                                                                                                                                        "ReplicatedStorage"
+                                                                                                                                    ).Remotes.CommF_:InvokeServer(
+                                                                                                                                        "StoreFruit",
+                                                                                                                                        "Leopard-Leopard",
+                                                                                                                                        game.Players.LocalPlayer.Character[
+                                                                                                                                            "Leopard Fruit"
+                                                                                                                                        ]
+                                                                                                                                    )
+                                                                                                                                end
+                                                                                                                            end
+                                                                                                                        end
+                                                                                                                    end
+                                                                                                                end
+                                                                                                            end
+                                                                                                        end
+                                                                                                    end
+                                                                                                end
+                                                                                            end
+                                                                                        end
+                                                                                    end
+                                                                                end
+                                                                            end
+                                                                        end
+                                                                    end
+                                                                end
+                                                            end
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+end
+
+function thisCode()
+    repeat task.wait() until game:IsLoaded()
+    local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    local File = pcall(function()
+        AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
+    end)
+    if not File then
+        table.insert(AllIDs, actualHour)
+        writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+    end
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(4)
+                end
+            end
+        end
+    end
+    
+    function Teleport()
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    local veryImportantWaitTime = 0.5
+    task.spawn(function()
+        while task.wait(veryImportantWaitTime) do
+            pcall(function()
+                for i,v in pairs(game.CoreGui:GetDescendants()) do
+                    pcall(function()
+                        if string.find(v.Name,"ErrorMessage") then
+                            if string.find(v.Text,"Security kick") then
+                                veryImportantWaitTime = 1e9
+                                Teleport()
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+    end)
+
+local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
+local bindable = Instance.new("BindableFunction")
+    
+function gui()
+    StarterGui:SetCore("SendNotification", {
+	Title = "Psithurism Auto Chest";
+	Text = "Find Chest?";
+	Icon = "https://www.roblox.com/asset/?id=177737131";
+	Duration = math.huge;
+	Callback = bindable;
+	Button1 = "Yes";
+	Button2 = "No";
+})
+end
+gui()
+
+    function bindable.OnInvoke(text)
+    if text == "No" then
+    aut = false
+    gui()
+    elseif text == "Yes" then
+    aut = true
+    gui()
+    auto()
+    end
+    end
+    
+function auto()
+    if aut == true then
+    task.spawn(function()
+        while aut == true do
+            if aut == true then
+                local hasChar = game.Players.LocalPlayer:FindFirstChild("Character")
+                if not game.Players.LocalPlayer.Character then
+        
+                else
+                    local hasCrewTag = game.Players.LocalPlayer.Character:FindFirstChild("CrewBBG",true)
+                    if hasCrewTag then hasCrewTag:Destroy() end
+                    local hasHumanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+                    if hasHumanoid then
+                        local Chest = game.Workspace:FindFirstChild("Chest4") or game.Workspace:FindFirstChild("Chest3") or game.Workspace:FindFirstChild("Chest2") or game.Workspace:FindFirstChild("Fruit ")
+                        
+                        if Chest then
+                            game.Players.LocalPlayer.Character:PivotTo(Chest:GetPivot())
+                            firesignal(Chest.Touched,game.Players.LocalPlayer.Character.HumanoidRootPart)
+                        else
+                        if game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
+         aut = false
+                        else
+                        while true do
+                            Store2()
+                            wait(3)
+                            Teleport()
+                            break
+                        end
+                    end 
+                end
+            end
+            end
+end
+            task.wait()
+        end
+    end)
+
+end
+end
+end
+
+thisCode()
+auto()
+
+join = game.Players.localPlayer.Neutral == false
+if _G.Team == nil then
+    _G.Team = "Pirates"
+end
+_G.Team = "Marines"
+if (_G.Team == "Pirates" or _G.Team == "Marines") and not join then
+    repeat wait()
+        pcall(function()
+            join = game.Players.localPlayer.Neutral == false
+            if _G.Team == "Pirates" then
+                for i,v in pairs({"MouseButton1Click", "MouseButton1Down", "Activated"}) do
+                    for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton[v])) do
+                        v.Function()
+                    end
+                end
+            elseif _G.Team == "Marines" then
+                for i,v in pairs({"MouseButton1Click", "MouseButton1Down", "Activated"}) do
+                    for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton[v])) do
+                        v.Function()
+                    end
+                end
+            else
+                for i,v in pairs({"MouseButton1Click", "MouseButton1Down", "Activated"}) do
+                    for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton[v])) do
+                        v.Function()
+                    end
+                end
+            end
+        end)
+    until join == true
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible = false
+end
