@@ -1,0 +1,73 @@
+function UseCode(Text)
+
+       game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(Text)
+
+   end
+
+   UseCode("UPD16")
+
+   UseCode("2BILLION")
+
+   UseCode("UPD15")
+
+   UseCode("FUDD10")
+
+   UseCode("BIGNEWS")
+
+   UseCode("THEGREATACE")
+
+   UseCode("SUB2GAMERROBOT_EXP1")
+
+   UseCode("StrawHatMaine")
+
+   UseCode("Sub2OfficialNoobie")
+
+   UseCode("SUB2NOOBMASTER123")
+
+   UseCode("Sub2Daigrock")
+
+   UseCode("Axiore")
+
+   UseCode("TantaiGaming")
+
+   UseCode("STRAWHATMAINE")
+
+   UseCode("3Bvisits")
+
+   UseCode("CINCODEMAYO_BOOST")
+
+   UseCode("15B_BESTBROTHERS")
+
+   UseCode("Sub2CaptainMaui")
+
+   UseCode("DEVSCOOKING")
+
+   UseCode("kittgaming")
+
+   UseCode("Sub2Fer999")
+
+   UseCode("Enyu_is_Pro")
+
+   UseCode("Magicbus")
+
+   UseCode("JCWK")
+
+   UseCode("Starcodeheo")
+
+   UseCode("Bluxxy")
+
+   UseCode("Sub2NoobMaster123")
+
+   UseCode("Sub2Daigrock")
+
+   UseCode("Bluxxy")
+
+   UseCode("Axiore")
+
+   UseCode("TantaiGaming")
+
+   UseCode("StrawHatMaine")
+
+   UseCode("Sub2OfficialNoobie")
+
+   UseCode("TheGreatAce")
