@@ -24,6 +24,29 @@ header.Size = UDim2.new(1, 0, 0, 25)
 header.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 header.Parent = frame
 
+-- ... existing code ...
+
+-- Create the close button
+local closeButton = Instance.new("TextButton")
+closeButton.Name = "CloseButton"
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Position = UDim2.new(1, -20, 0.5, -10)
+closeButton.BackgroundTransparency = 1 -- Set background transparency to make it invisible
+closeButton.Text = "X"
+closeButton.Font = Enum.Font.GothamBold
+closeButton.TextSize = 13
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.Parent = header
+
+-- Add functionality to the close button
+closeButton.MouseButton1Click:Connect(function()
+    -- Handle the close button click event
+    frame.Visible = false -- Set the main frame visibility to false to hide the GUI
+end)
+
+-- ... existing code ...
+
+
 -- Create the title label
 local titleLabel = Instance.new("TextLabel")
 titleLabel.Size = UDim2.new(1, 0, 1, 0)
