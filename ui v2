@@ -1,0 +1,118 @@
+-- Create a ScreenGui object
+local gui = Instance.new("ScreenGui")
+gui.Name = "AutoChestGUI"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create the main frame for the GUI
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 100)
+frame.Position = UDim2.new(0.5, -100, 0.5, -50)
+frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+frame.BackgroundTransparency = 0.8
+frame.Active = true
+frame.Draggable = true
+frame.Parent = gui
+
+-- Add rounded corners to the frame
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 10)
+corner.Parent = frame
+
+-- Create the header frame
+local header = Instance.new("Frame")
+header.Size = UDim2.new(1, 0, 0, 25)
+header.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+header.Parent = frame
+
+-- Create the title label
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, 0, 1, 0)
+titleLabel.Position = UDim2.new(0, 0, 0, 0)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "Auto Chest"
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.TextSize = 18
+titleLabel.TextXAlignment = Enum.TextXAlignment.Center
+titleLabel.TextYAlignment = Enum.TextYAlignment.Center
+titleLabel.Parent = header
+
+-- Create the on/off button
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 80, 0, 30)
+button.Position = UDim2.new(0.5, -40, 0, 40)
+button.AnchorPoint = Vector2.new(0, 0)
+button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+button.BorderSizePixel = 0
+button.Font = Enum.Font.SourceSans
+button.Text = "OFF"
+button.TextColor3 = Color3.fromRGB(0, 0, 0)
+button.TextSize = 14
+button.Parent = frame
+
+-- ... existing code ...
+
+-- Add Rals credit text
+local creditText = Instance.new("TextLabel")
+creditText.Name = "CreditText"
+creditText.Parent = frame
+creditText.BackgroundTransparency = 1
+creditText.Size = UDim2.new(1, 0, 0, 20)
+creditText.Position = UDim2.new(0, 0, 1, -20)
+creditText.Font = Enum.Font.SourceSans
+creditText.Text = "Credits: Psithurism"
+creditText.TextSize = 20
+creditText.TextColor3 = Color3.new(1, 1, 1)
+creditText.TextStrokeColor3 = Color3.new(0, 0, 0)
+creditText.TextStrokeTransparency = 0
+creditText.TextTransparency = 0.5
+
+creditText.TextScaled = true
+creditText.TextWrapped = true
+creditText.TextXAlignment = Enum.TextXAlignment.Center
+creditText.TextYAlignment = Enum.TextYAlignment.Center
+
+-- ... existing code ...
+
+-- Add rounded corners to the button
+local buttonCorner = Instance.new("UICorner")
+buttonCorner.CornerRadius = UDim.new(0, 10)
+buttonCorner.Parent = button
+
+local TweenService = game:GetService("TweenService")
+
+-- ... existing code ...
+
+-- Add functionality to the button
+local isAutoChestEnabled = false
+
+local function playButtonAnimation()
+    -- Create a color transition animation
+    local originalColor = button.BackgroundColor3
+    local onColor = Color3.fromRGB(64, 224, 208) -- Set the color when the button is turned on (futuristic green)
+    local transitionTime = 0.5 -- Set the duration of the color transition animation here
+
+    local colorTween
+
+    local function toggleButton()
+        isAutoChestEnabled = not isAutoChestEnabled
+        button.Text = isAutoChestEnabled and "ON" or "OFF"
+
+        if isAutoChestEnabled then
+            -- Create and play the color transition animation when turning on
+            colorTween = TweenService:Create(button, TweenInfo.new(transitionTime), { BackgroundColor3 = onColor })
+            colorTween:Play()
+        else
+            -- Create and play the color transition animation when turning off
+            colorTween = TweenService:Create(button, TweenInfo.new(transitionTime), { BackgroundColor3 = originalColor })
+            colorTween:Play()
+        end
+
+        -- Add your own logic here for enabling or disabling Auto Chest functionality
+    end
+
+    -- Play the animation when the button is clicked
+    button.MouseButton1Click:Connect(toggleButton)
+end
+
+playButtonAnimation()
