@@ -1,4 +1,2 @@
-88.214.57.151 growtopia1.com
-88.214.57.151 growtopia2.com
-88.214.57.151 www.growtopia1.com
-88.214.57.151 www.growtopia2.com
+185.136.206.254 www.growtopia1.com
+185.136.206.254 www.growtopia2.com
