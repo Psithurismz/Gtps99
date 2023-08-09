@@ -1,2 +1,2 @@
-185.136.206.254 www.growtopia1.com
-185.136.206.254 www.growtopia2.com
+179.61.251.107 www.growtopia1.com
+179.61.251.107 www.growtopia2.com
