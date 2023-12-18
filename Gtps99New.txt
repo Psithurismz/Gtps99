@@ -1,2 +1,2 @@
-194.62.1.188 www.growtopia1.com
-194.62.1.188 www.growtopia2.com
+139.162.53.188 www.growtopia1.com
+139.162.53.188 www.growtopia2.com
